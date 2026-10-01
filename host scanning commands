@@ -1,0 +1,47 @@
+1.	Active Reconnaissance with Nmap Command
+  sudo nmap -sn -PE <target>
+
+2.	Find Alive Hosts with Netdiscover
+  sudo netdiscover -r <target>
+
+3.	Find Top 10 Open Ports with Nmap (Fast Scan): 
+  nmap <target> –top-ports 10 –open
+
+4.	Scanning with Unicornscan: 
+  sudo us -mT -Iv <target>:a -r 3000 -R 3 && us -mU -Iv <target>:a -r 3000     -R 3
+
+5.	TCP Syn Scan with Nmap:
+  sudo nmap -sS -sV -T4 <target>
+
+6.	Scanning with HPING3:
+  hping3 –scan known <target>
+
+7.	Version Scanning with Nmap: 
+  Command: nmap -sV <target>
+
+8.	Firewall Bypass:
+  sudo nmap -f –mtu=512 <target>
+
+9.	Scanning with Masscan: 
+  masscan <network> -p80 –banners –source-ip <target>
+
+10.	Specific Port Scanning:
+  nmap -p 80 <target>
+
+11.	Open Ports Scanning: 
+  nmap --open <target>
+
+12.	Active Remote Hosts Scanning: 
+  nmap -sn <target/port>
+
+13.	OS fingerprinting: 
+    nmap -O <target>
+    
+14.	TCP port scan:
+  nc -nvz <target> 1-1024
+
+15.	Performing a detailed scan: 
+   nmap -A <target>
+  
+  
+  
