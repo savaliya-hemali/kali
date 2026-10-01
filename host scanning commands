@@ -5,43 +5,43 @@
   sudo netdiscover -r 10.0.15
 
 3.	Find Top 10 Open Ports with Nmap (Fast Scan): 
-  nmap <target> –top-ports 10 –open
+  nmap 18.164.124.78 -top-ports 10 -open
 
 4.	Scanning with Unicornscan: 
-  sudo us -mT -Iv <target>:a -r 3000 -R 3 && us -mU -Iv <target>:a -r 3000     -R 3
+ sudo us -mT -Iv 127.0.0.1:a -r 3000 -R3 && us -mU -Iv 127.0.0.1:a -r 3000 -R3 
 
 5.	TCP Syn Scan with Nmap:
-  sudo nmap -sS -sV -T4 <target>
+  sudo nmap -sS -sV -T4 18.164.124.78
 
 6.	Scanning with HPING3:
-  hping3 –scan known <target>
+ sudo hping3 -V --scan known 18.164.124.78
 
 7.	Version Scanning with Nmap: 
-  Command: nmap -sV <target>
+ nmap -sV 18.164.124.78
 
 8.	Firewall Bypass:
-  sudo nmap -f –mtu=512 <target>
+  sudo nmap -f -mtu=512 18.164.124.78
 
 9.	Scanning with Masscan: 
-  masscan <network> -p80 –banners –source-ip <target>
+   sudo masscan 10.0.2.0/24 -p21 --banners --source-ip 10.0.2.200
 
 10.	Specific Port Scanning:
-  nmap -p 80 <target>
+  nmap -p 80 18.164.124.78
 
 11.	Open Ports Scanning: 
-  nmap --open <target>
+  nmap --open 18.164.124.78
 
 12.	Active Remote Hosts Scanning: 
-  nmap -sn <target/port>
+  nmap -sn 18.164.124.78/443
 
 13.	OS fingerprinting: 
-    nmap -O <target>
+    nmap -O 18.164.124.78
     
 14.	TCP port scan:
-  nc -nvz <target> 1-1024
+  nc -nvz 18.164.124.78 22 80 443
 
 15.	Performing a detailed scan: 
-   nmap -A <target>
+   nmap -A 18.164.124.78
   
   
   
