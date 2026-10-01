@@ -1,8 +1,8 @@
 1.	Active Reconnaissance with Nmap Command
-  sudo nmap -sn -PE <target>
+  sudo nmap -sn -PE 18.164.124.78
 
 2.	Find Alive Hosts with Netdiscover
-  sudo netdiscover -r <target>
+  sudo netdiscover -r 10.0.15
 
 3.	Find Top 10 Open Ports with Nmap (Fast Scan): 
   nmap <target> –top-ports 10 –open
